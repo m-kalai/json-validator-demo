@@ -1,0 +1,7 @@
+{
+  "source": "/home/alice/image.iso",
+  "chunks": {
+    "size": 1024,
+    "number": null
+  }
+}
