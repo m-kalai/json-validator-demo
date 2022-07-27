@@ -15,6 +15,8 @@ object Main extends ZIOAppDefault {
         req.bodyAsString.flatMap(body =>
           ValidationHandler.uploadSchema(schemaId, body)
         )
+      case Method.DELETE -> !! / "schema" / schemaId =>
+        ValidationHandler.deleteSchema(schemaId)
       case req @ Method.POST -> !! / "validate" / schemaId =>
         req.bodyAsString.flatMap(body =>
           ValidationHandler.validateDocument(schemaId, body)

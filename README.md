@@ -7,7 +7,7 @@ Application provides REST service for validation of JSON documents.
 ```
 POST    /schema/SCHEMAID        - Upload a JSON Schema with unique `SCHEMAID`
 GET     /schema/SCHEMAID        - Download a JSON Schema with unique `SCHEMAID`
-
+DELETE  /schema/SCHEMAID        - Delete a JSON Schema with unique `SCHEMAID`
 POST    /validate/SCHEMAID      - Validate a JSON document against the JSON Schema identified by `SCHEMAID`
 ```
 
@@ -20,7 +20,7 @@ sbt run
 ```
 or
 ```shell
-sbt runMain jvd.Main
+sbt "runMain jvd.Main"
 
 ```
 
